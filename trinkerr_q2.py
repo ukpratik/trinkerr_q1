@@ -11,7 +11,7 @@ def getGroups(keys):
         for j in range(i+1,len(keys)):
             if j not in done_index:
                 temp_key_2 = keys[j]
-                if temp_key_1.sort() == temp_key_2.sort():
+                if sorted(temp_key_1) == sorted(temp_key_2):
                     temp.append(keys[j])
                     done_index.append(j)
         res.append(temp)
